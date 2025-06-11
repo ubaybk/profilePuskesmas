@@ -1,6 +1,8 @@
 import { useState, useEffect, useRef } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
 import Navbar from "../Navbar";
+import TentangKamiDropdown from "../TentangKamiDropdown";
+import PuskesmasPembantuDropdown from "../PuskesmasPembantuDropDown";
 
 const Header = () => {
     // State management
@@ -30,7 +32,7 @@ const Header = () => {
                 {
                     id: "klaster1",
                     label: "Klaster 1",
-                    path: "/Klaster1",
+                    // path: "/Klaster1",
                     description: "(Manajemen)",
                     submenu: [
                         {
@@ -44,7 +46,7 @@ const Header = () => {
                 {
                     id: "klaster2",
                     label: "Klaster 2",
-                    path: "/Klaster2",
+                    // path: "/Klaster2",
                     description: "(Ibu dan Anak)",
                     submenu: [
                         {
@@ -91,7 +93,7 @@ const Header = () => {
                 {
                     id: "klaster3",
                     label: "Klaster 3",
-                    path: "/Klaster3",
+                    // path: "/Klaster3",
                     description: "(Usia Dewasa dan Lansia)",
                     submenu:[
                         {
@@ -109,7 +111,7 @@ const Header = () => {
                 {
                     id: "klaster4",
                     label: "Klaster 4",
-                    path: "/Klaster4",
+                    // path: "/Klaster4",
                     description: "(Penanggulangan Penyakit Menular)",
                     submenu: [
                         {
@@ -127,7 +129,7 @@ const Header = () => {
                 {
                     id: "klaster5",
                     label: "Klaster 5",
-                    path: "/Klaster5",
+                    // path: "/Klaster5",
                     description: "(Lintas Klaster)",
                     submenu: [
                         {
@@ -151,8 +153,8 @@ const Header = () => {
         },
         { id: "jenis", label: "Jenis Layanan", path: "/JenisLayanan" },
         { id: "tarif", label: "Tarif Layanan", path: "/TarifLayanan" },
-        { id: "pembantu", label: "Puskesmas Pembantu", path: "/PuskesmasPembantu" },
-        { id: "tentang", label: "Tentang Kami", path: "/TentangKami" },
+        // { id: "pembantu", label: "Puskesmas Pembantu", path: "/PuskesmasPembantu" },
+        // { id: "tentang", label: "Tentang Kami", path: "/TentangKami" },
         { id: "karir", label: "Karir", path: "/Karir" },
         { id: "aduan", label: "Aduan", path: "/Aduan" },
         { id: "jaksehat", label: "Jaksehat", path: "/Jaksehat" },
@@ -450,6 +452,9 @@ const DesktopSubmenuItem = ({ item, depth = 0 }) => {
                                 <DesktopMenuItem key={item.id} item={item} />
                             ))}
 
+                            <PuskesmasPembantuDropdown/>
+                            <TentangKamiDropdown />
+
                             {/* User Dropdown */}
                             {userName && (
                                 <div className="relative ml-4" ref={userDropdownRef}>
@@ -556,6 +561,14 @@ const DesktopSubmenuItem = ({ item, depth = 0 }) => {
                         {menuItems.map((item) => (
                             <MobileMenuItem key={item.id} item={item} />
                         ))}
+
+                         <TentangKamiDropdown 
+    isMobile={true} 
+    onItemClick={() => {
+        setMenuOpen(false);
+        setOpenDropdowns({});
+    }} 
+/>
 
                         {/* Mobile User Menu */}
                         {userName && (

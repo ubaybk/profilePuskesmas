@@ -9,7 +9,8 @@ import IntegrasiLayanan from "../Pages/IntegrasiLayanan"
 import Karir from "../Pages/Karir"
 import Login from "../Pages/Login"
 import CreateKarir from "../Pages/CreateKarir"
-Login
+import KegiatanEsensial from "../Pages/Jenis Layanan/UKM/KegiatanEsensial"
+
 
 
 
@@ -57,6 +58,10 @@ export const routes = [
     {
         path: "/createKarir",
         element: <CreateKarir/>
+    },
+    {
+        path: "/kegiatanEsensial",
+        element: <KegiatanEsensial/>
     }
     
     
