@@ -10,6 +10,8 @@ import Karir from "../Pages/Karir"
 import Login from "../Pages/Login"
 import CreateKarir from "../Pages/CreateKarir"
 import KegiatanEsensial from "../Pages/Jenis Layanan/UKM/KegiatanEsensial"
+import VisiMisi from "../Pages/VisiMisi"
+import TataNilai from "../Pages/TataNilai"
 
 
 
@@ -62,6 +64,14 @@ export const routes = [
     {
         path: "/kegiatanEsensial",
         element: <KegiatanEsensial/>
+    },
+    {
+        path: "/visiMisi",
+        element: <VisiMisi/>
+    },
+    {
+        path: "/tataNilai",
+        element: <TataNilai/>
     }
     
     
