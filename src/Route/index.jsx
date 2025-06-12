@@ -36,7 +36,7 @@ export const routes = [
         element: <TarifLayanan />
     },
     {
-        path: "/PuskesmasPembantu",
+        path: "/PuskesmasPembantu/:id",
         element: <PuskesmasPembantu />
     },
     {
