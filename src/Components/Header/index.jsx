@@ -2,7 +2,7 @@ import { useState, useEffect, useRef } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
 import Navbar from "../Navbar";
 import TentangKamiDropdown from "../TentangKamiDropdown";
-import PuskesmasPembantuDropdown from "../PuskesmasPembantuDropDown";
+import PuskesmasPembantuDropdown from "../PuskesmasPembantuDropdown.jsx";
 
 const Header = () => {
     // State management
